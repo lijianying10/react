@@ -37,6 +37,36 @@ func HTML(s string) []react.Element {
 		return v
 	}
 
+	toParse := getParse(s)
+
+	var res []react.Element
+
+	for _, v := range toParse {
+		res = append(res, parse(v))
+	}
+
+	htmlCache[s] = res
+
+	return res
+}
+
+func HTMLComp(s string, comp map[string]react.Element) []react.Element {
+	toParse := getParse(s)
+
+	var res []react.Element
+
+	for _, v := range toParse {
+		if val, ok := comp[v.Data]; ok {
+			res = append(res, val)
+		} else {
+			res = append(res, parse(v))
+		}
+	}
+
+	return res
+}
+
+func getParse(s string) []*html.Node {
 	// a dummy div for parsing the fragment
 	div := &html.Node{
 		Type:     html.ElementNode,
@@ -51,7 +81,6 @@ func HTML(s string) []react.Element {
 
 	var toParse []*html.Node
 	var toWalk []*html.Node
-
 	for _, v := range elems {
 		if v.Type == html.TextNode && strings.TrimSpace(v.Data) == "" {
 			continue
@@ -76,16 +105,7 @@ func HTML(s string) []react.Element {
 			c = c.NextSibling
 		}
 	}
-
-	var res []react.Element
-
-	for _, v := range toParse {
-		res = append(res, parse(v))
-	}
-
-	htmlCache[s] = res
-
-	return res
+	return toParse
 }
 
 // HTMLElem is a convenience wrapper around HTML where only a single root
