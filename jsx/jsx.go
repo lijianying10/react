@@ -50,7 +50,8 @@ func HTML(s string) []react.Element {
 	return res
 }
 
-func HTMLComp(s string, comp map[string]react.Element) []react.Element {
+// HTMLReactElementTemplate Parse Component map key as HTML node name. The key must be lower-case.
+func HTMLReactElementTemplate(s string, comp map[string]react.Element) []react.Element {
 	toParse := getParse(s)
 
 	var res []react.Element
@@ -114,6 +115,17 @@ func getParse(s string) []*html.Node {
 //
 func HTMLElem(s string) react.Element {
 	res := HTML(s)
+
+	if v := len(res); v != 1 {
+		panic(fmt.Errorf("expected single element result from %q; got %v", s, v))
+	}
+
+	return res[0]
+}
+
+// HTMLElemReactElementTemplate Parse Component map key as HTML node name. The key must be lower-case.
+func HTMLElemReactElementTemplate(s string, comp map[string]react.Element) react.Element {
+	res := HTMLReactElementTemplate(s, comp)
 
 	if v := len(res); v != 1 {
 		panic(fmt.Errorf("expected single element result from %q; got %v", s, v))
