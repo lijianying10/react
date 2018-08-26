@@ -5,9 +5,10 @@
   "keywords": [],
   "author": "",
   "devDependencies": {
-    "create-react-class": "15.6.2",
-    "react": "16.2.0",
-    "react-dom": "16.2.0",
-    "webpack": "3.10.0"
+    "create-react-class": "15.6.3",
+    "react": "16.4.2",
+    "react-dom": "16.4.2",
+    "webpack": "4.17.1",
+    "webpack-cli": "^3.1.0"
   }
 }
