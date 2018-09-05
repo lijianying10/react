@@ -267,6 +267,7 @@ func (g *gen) genComp(defName string) {
 	cg.pf("package %v\n", cg.pkg)
 
 	cg.pf("import \"%v\"\n", reactPkg)
+	cg.pf("import \"%v\"\n", jsPkg)
 	cg.pln()
 
 	cg.pt(`
@@ -299,6 +300,25 @@ func build{{.Name}}Elem({{if .HasProps}}props {{.Name}}Props,{{end}} children ..
 	return &{{.Name}}Elem{
 		Element: react.CreateElement(build{{.Name}}, {{if .HasProps}}props{{else}}nil{{end}}, children...),
 	}
+}
+
+func build{{.Name}}ElemRef({{if .HasProps}}props {{.Name}}Props,{{end}} GetRef func(*js.Object), children ...react.Element) *{{.Name}}Elem {
+	return &{{.Name}}Elem{
+		Element: react.CreateElementRef(build{{.Name}}, {{if .HasProps}}props{{else}}nil{{end}} ,GetRef , children...),
+	}
+}
+
+func RefTo{{.Name}}Def(ref *js.Object) (*{{.Name}}Def, bool) {
+	if ref == js.Undefined || ref == nil {
+		return nil, false
+	}
+	current := ref.Get("current")
+	if current == js.Undefined || current == nil {
+		return nil, false
+	}
+	return &{{.Name}}Def{
+		react.RefToComponent(ref),
+	}, true
 }
 
 func ({{.Recv}} {{.Name}}Def) RendersElement() react.Element {
