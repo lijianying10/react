@@ -42,6 +42,7 @@ const (
 	reactCompShouldComponentUpdate     = "shouldComponentUpdate"
 	reactCompComponentDidMount         = "componentDidMount"
 	reactCompComponentWillReceiveProps = "componentWillReceiveProps"
+	reactCompComponentDidUpdate        = "componentDidUpdate"
 	reactCompComponentWillMount        = "componentWillMount"
 	reactCompComponentWillUnmount      = "componentWillUnmount"
 	reactCompRender                    = "render"
@@ -96,6 +97,11 @@ type componentWithDidMount interface {
 type componentWithWillReceiveProps interface {
 	Component
 	ComponentWillReceivePropsIntf(i interface{})
+}
+
+type componentWithDidUpdate interface {
+	Component
+	ComponentDidUpdate(prop interface{})
 }
 
 type componentWithGetInitialState interface {
@@ -324,6 +330,18 @@ func buildReactComponent(typ reflect.Type, builder ComponentBuilder) *js.Object 
 		if cmp, ok := cmp.(componentWithWillReceiveProps); ok {
 			ourProps := *(unwrapValue(arguments[0].Get(nestedProps)).(*Props))
 			cmp.ComponentWillReceivePropsIntf(ourProps)
+		}
+
+		return nil
+	}))
+
+	compDef.Set(reactCompComponentDidUpdate, js.MakeFunc(func(this *js.Object, arguments []*js.Object) interface{} {
+		elem := this
+		cmp := builder(ComponentDef{elem: elem})
+
+		if cmp, ok := cmp.(componentWithDidUpdate); ok {
+			ourProps := *(unwrapValue(arguments[0].Get(nestedProps)).(*Props))
+			cmp.ComponentDidUpdate(ourProps)
 		}
 
 		return nil
