@@ -191,6 +191,47 @@ func CreateElement(buildCmp ComponentBuilder, newprops Props, children ...Elemen
 	}
 }
 
+// Conver Ref pointer to ComponentDef
+func RefToComponent(ref *js.Object) ComponentDef {
+	return ComponentDef{
+		elem: ref.Get("current"),
+	}
+}
+
+func CreateElementRef(buildCmp ComponentBuilder, newprops Props, GetRef func(*js.Object), children ...Element) Element {
+	cmp := buildCmp(ComponentDef{})
+	typ := reflect.TypeOf(cmp)
+
+	comp, ok := compMap[typ]
+	if !ok {
+		comp = buildReactComponent(typ, buildCmp)
+		compMap[typ] = comp
+	}
+
+	propsWrap := object.New()
+	if newprops != nil {
+		propsWrap.Set(nestedProps, wrapValue(&newprops))
+	}
+
+	compRef := react.Call("createRef", nil)
+	GetRef(compRef)
+	propsWrap.Set("ref", compRef)
+
+	if children != nil {
+		propsWrap.Set(nestedChildren, wrapValue(&children))
+	}
+
+	args := []interface{}{comp, propsWrap}
+
+	for _, v := range children {
+		args = append(args, v)
+	}
+
+	return &elementHolder{
+		Elem: react.Call(reactCreateElement, args...),
+	}
+}
+
 func createElement(cmp interface{}, props interface{}, children ...Element) Element {
 	args := []interface{}{cmp, props}
 
