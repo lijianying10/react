@@ -191,7 +191,8 @@ func CreateElement(buildCmp ComponentBuilder, newprops Props, children ...Elemen
 	}
 }
 
-func CurrentComponent(ref *js.Object) ComponentDef {
+// Conver Ref pointer to ComponentDef
+func RefToComponent(ref *js.Object) ComponentDef {
 	return ComponentDef{
 		elem: ref.Get("current"),
 	}
