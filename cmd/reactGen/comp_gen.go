@@ -22,6 +22,7 @@ type compGen struct {
 	HasProps                     bool
 	HasGetInitState              bool
 	HasComponentWillReceiveProps bool
+	HasComponentWithDidUpdate    bool
 
 	PropsHasEquals bool
 	StateHasEquals bool
@@ -217,6 +218,34 @@ func (g *gen) genComp(defName string) {
 			}
 		}
 
+		for _, ff := range g.nonPointMeths[defName] {
+			m := ff.fn
+
+			if m.Name.Name != componentDidUpdate {
+				continue
+			}
+
+			if m.Type.Params != nil && len(m.Type.Params.List) != 1 {
+				continue
+			}
+
+			if m.Type.Results != nil && len(m.Type.Results.List) != 0 {
+				continue
+			}
+
+			p := m.Type.Params.List[0]
+
+			id, ok := p.Type.(*ast.Ident)
+			if !ok {
+				continue
+			}
+
+			if id.Name == name+propsTypeSuffix {
+				cg.HasComponentWithDidUpdate = true
+				break
+			}
+		}
+
 		for _, ff := range g.nonPointMeths[name+propsTypeSuffix] {
 			m := ff.fn
 
@@ -390,6 +419,15 @@ func ({{.Recv}} {{.Name}}Def) Props() {{.Name}}Props {
 func ({{.Recv}} {{.Name}}Def) ComponentWillReceivePropsIntf(val interface{}) {
 	ourProps := val.({{.Name}}Props)
 	{{.Recv}}.ComponentWillReceiveProps(ourProps)
+}
+{{end}}
+
+{{if .HasComponentWithDidUpdate}}
+// ComponentWithDidUpdateIntf is an auto-generated proxy to
+// ComponentWithDidUpdate
+func ({{.Recv}} {{.Name}}Def) ComponentDidUpdateIntf(val interface{}) {
+	ourProps := val.({{.Name}}Props)
+	{{.Recv}}.ComponentDidUpdate(ourProps)
 }
 {{end}}
 

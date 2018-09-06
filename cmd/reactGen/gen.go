@@ -28,6 +28,7 @@ const (
 
 	getInitialState           = "GetInitialState"
 	componentWillReceiveProps = "ComponentWillReceiveProps"
+	componentDidUpdate        = "ComponentDidUpdate"
 	equals                    = "Equals"
 )
 

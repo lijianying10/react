@@ -101,7 +101,7 @@ type componentWithWillReceiveProps interface {
 
 type componentWithDidUpdate interface {
 	Component
-	ComponentDidUpdate(prop interface{})
+	ComponentDidUpdateIntf(prop interface{})
 }
 
 type componentWithGetInitialState interface {
@@ -341,7 +341,7 @@ func buildReactComponent(typ reflect.Type, builder ComponentBuilder) *js.Object 
 
 		if cmp, ok := cmp.(componentWithDidUpdate); ok {
 			ourProps := *(unwrapValue(arguments[0].Get(nestedProps)).(*Props))
-			cmp.ComponentDidUpdate(ourProps)
+			cmp.ComponentDidUpdateIntf(ourProps)
 		}
 
 		return nil
