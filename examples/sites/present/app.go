@@ -10,7 +10,7 @@ import (
 
 	"honnef.co/go/js/dom"
 	"honnef.co/go/js/xhr"
-	"myitcv.io/react"
+	"github.com/lijianying10/react"
 )
 
 const (

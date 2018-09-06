@@ -6,7 +6,7 @@ import (
 
 	"honnef.co/go/js/dom"
 
-	r "myitcv.io/react"
+	r "github.com/lijianying10/react"
 )
 
 const (
@@ -28,7 +28,7 @@ type ImmSelectEntry interface {
 	Range() []Label
 }
 
-// SelectDef is a wrapper around the myitcv.io/react.SelectDef component. It allows
+// SelectDef is a wrapper around the github.com/lijianying10/react.SelectDef component. It allows
 // any value implementing the Label interface to be selected
 //
 type SelectDef struct {

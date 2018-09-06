@@ -2,4 +2,4 @@
 
 package bundle
 
-import _ "myitcv.io/react/internal/dev"
+import _ "github.com/lijianying10/react/internal/dev"

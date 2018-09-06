@@ -2,7 +2,7 @@
 
 package main
 
-import "myitcv.io/react"
+import "github.com/lijianying10/react"
 
 type PersonViewerElem struct {
 	react.Element
@@ -36,7 +36,7 @@ func (p PersonViewerDef) State() PersonViewerState {
 }
 
 // IsState is an auto-generated definition so that PersonViewerState implements
-// the myitcv.io/react.State interface.
+// the github.com/lijianying10/react.State interface.
 func (p PersonViewerState) IsState() {}
 
 var _ react.State = PersonViewerState{}

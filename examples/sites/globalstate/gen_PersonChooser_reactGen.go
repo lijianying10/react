@@ -2,7 +2,7 @@
 
 package main
 
-import "myitcv.io/react"
+import "github.com/lijianying10/react"
 
 type PersonChooserElem struct {
 	react.Element
@@ -36,7 +36,7 @@ func (p PersonChooserDef) State() PersonChooserState {
 }
 
 // IsState is an auto-generated definition so that PersonChooserState implements
-// the myitcv.io/react.State interface.
+// the github.com/lijianying10/react.State interface.
 func (p PersonChooserState) IsState() {}
 
 var _ react.State = PersonChooserState{}
@@ -51,7 +51,7 @@ func (p PersonChooserState) EqualsIntf(val react.State) bool {
 }
 
 // IsProps is an auto-generated definition so that PersonChooserProps implements
-// the myitcv.io/react.Props interface.
+// the github.com/lijianying10/react.Props interface.
 func (p PersonChooserProps) IsProps() {}
 
 // Props is an auto-generated proxy to the current props of PersonChooser

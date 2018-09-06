@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"strings"
 
-	"myitcv.io/react"
+	"github.com/lijianying10/react"
 )
 
 func parseCSS(s string) *react.CSS {

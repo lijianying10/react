@@ -6,8 +6,8 @@ package main
 import (
 	"net/url"
 
-	"myitcv.io/react"
-	"myitcv.io/react/examples/todoapp"
+	"github.com/lijianying10/react"
+	"github.com/lijianying10/react/examples/todoapp"
 
 	"honnef.co/go/js/dom"
 )

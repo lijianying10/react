@@ -9,7 +9,7 @@ library for building user interfaces.
 For more information see https://github.com/myitcv/react/wiki
 
 */
-package react // import "myitcv.io/react"
+package react // import "github.com/lijianying10/react"
 
 //go:generate cssGen
 //go:generate coreGen
@@ -26,8 +26,8 @@ import (
 	// imported for the side effect of bundling react
 	// build tags control whether this actually includes
 	// js files or not
-	_ "myitcv.io/react/internal/bundle"
-	"myitcv.io/react/internal/core"
+	_ "github.com/lijianying10/react/internal/bundle"
+	"github.com/lijianying10/react/internal/core"
 )
 
 const (

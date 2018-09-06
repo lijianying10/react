@@ -19,7 +19,7 @@ import (
 )
 
 const (
-	reactPkg      = "myitcv.io/react"
+	reactPkg      = "github.com/lijianying10/react"
 	compDefName   = "ComponentDef"
 	compDefSuffix = "Def"
 
@@ -183,8 +183,8 @@ import (
 
 	"honnef.co/go/js/dom"
 
-	"myitcv.io/react"
-	"myitcv.io/react/testutils"
+	"github.com/lijianying10/react"
+	"github.com/lijianying10/react/testutils"
 )
 	`)
 
@@ -197,7 +197,7 @@ import (
 	"fmt"
 	"strings"
 
-	"myitcv.io/react"
+	"github.com/lijianying10/react"
 
 	"golang.org/x/net/html"
 )

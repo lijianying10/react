@@ -2,7 +2,7 @@
 
 package markdowneditor
 
-import "myitcv.io/react"
+import "github.com/lijianying10/react"
 
 type MarkdownEditorElem struct {
 	react.Element
@@ -36,7 +36,7 @@ func (m MarkdownEditorDef) State() MarkdownEditorState {
 }
 
 // IsState is an auto-generated definition so that MarkdownEditorState implements
-// the myitcv.io/react.State interface.
+// the github.com/lijianying10/react.State interface.
 func (m MarkdownEditorState) IsState() {}
 
 var _ react.State = MarkdownEditorState{}

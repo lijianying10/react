@@ -1,8 +1,8 @@
 package main
 
 import (
-	"myitcv.io/react"
-	"myitcv.io/react/examples/sites/globalstate/state"
+	"github.com/lijianying10/react"
+	"github.com/lijianying10/react/examples/sites/globalstate/state"
 )
 
 type AppDef struct {

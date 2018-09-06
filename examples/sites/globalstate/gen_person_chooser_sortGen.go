@@ -5,7 +5,7 @@ package main
 import "sort"
 import "myitcv.io/sorter"
 
-import "myitcv.io/react/examples/sites/globalstate/model"
+import "github.com/lijianying10/react/examples/sites/globalstate/model"
 
 func sortPeopleKeysByName(vs *model.People) *model.People {
 	theVs := vs.AsMutable()

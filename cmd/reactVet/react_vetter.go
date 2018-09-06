@@ -14,7 +14,7 @@ import (
 )
 
 const (
-	jsxImportPath = "myitcv.io/react/jsx"
+	jsxImportPath = "github.com/lijianying10/react/jsx"
 
 	jsxHTML     = "HTML"
 	jsxMarkdown = "Markdown"

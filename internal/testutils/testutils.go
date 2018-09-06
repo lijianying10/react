@@ -1,3 +1,3 @@
-package testutils //import "myitcv.io/react/internal/testutils"
+package testutils //import "github.com/lijianying10/react/internal/testutils"
 
-import _ "myitcv.io/react"
+import _ "github.com/lijianying10/react"

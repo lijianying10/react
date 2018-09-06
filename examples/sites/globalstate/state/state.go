@@ -1,6 +1,6 @@
 package state
 
-import "myitcv.io/react/examples/sites/globalstate/model"
+import "github.com/lijianying10/react/examples/sites/globalstate/model"
 
 //go:generate stateGen
 

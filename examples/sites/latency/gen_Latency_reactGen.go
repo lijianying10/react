@@ -2,7 +2,7 @@
 
 package main
 
-import "myitcv.io/react"
+import "github.com/lijianying10/react"
 
 type LatencyElem struct {
 	react.Element
@@ -36,7 +36,7 @@ func (l LatencyDef) State() LatencyState {
 }
 
 // IsState is an auto-generated definition so that LatencyState implements
-// the myitcv.io/react.State interface.
+// the github.com/lijianying10/react.State interface.
 func (l LatencyState) IsState() {}
 
 var _ react.State = LatencyState{}

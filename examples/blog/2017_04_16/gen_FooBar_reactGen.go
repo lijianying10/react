@@ -2,7 +2,7 @@
 
 package main
 
-import "myitcv.io/react"
+import "github.com/lijianying10/react"
 
 type FooBarElem struct {
 	react.Element
@@ -36,7 +36,7 @@ func (f FooBarDef) State() FooBarState {
 }
 
 // IsState is an auto-generated definition so that FooBarState implements
-// the myitcv.io/react.State interface.
+// the github.com/lijianying10/react.State interface.
 func (f FooBarState) IsState() {}
 
 var _ react.State = FooBarState{}
@@ -51,7 +51,7 @@ func (f FooBarState) EqualsIntf(val react.State) bool {
 }
 
 // IsProps is an auto-generated definition so that FooBarProps implements
-// the myitcv.io/react.Props interface.
+// the github.com/lijianying10/react.Props interface.
 func (f FooBarProps) IsProps() {}
 
 // Props is an auto-generated proxy to the current props of FooBar

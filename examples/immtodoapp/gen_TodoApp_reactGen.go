@@ -2,7 +2,7 @@
 
 package immtodoapp
 
-import "myitcv.io/react"
+import "github.com/lijianying10/react"
 
 type TodoAppElem struct {
 	react.Element
@@ -36,7 +36,7 @@ func (t TodoAppDef) State() TodoAppState {
 }
 
 // IsState is an auto-generated definition so that TodoAppState implements
-// the myitcv.io/react.State interface.
+// the github.com/lijianying10/react.State interface.
 func (t TodoAppState) IsState() {}
 
 var _ react.State = TodoAppState{}

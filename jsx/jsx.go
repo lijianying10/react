@@ -1,6 +1,6 @@
 /*
 
-Package jsx allows you to render blocks of HTML as myitcv.io/react elements.
+Package jsx allows you to render blocks of HTML as github.com/lijianying10/react elements.
 It is a temporary runtime solution for what will become a compile-time
 transpilation, much like JSX's relationship with Javascript.
 
@@ -13,7 +13,7 @@ import (
 	"fmt"
 	"strings"
 
-	"myitcv.io/react"
+	"github.com/lijianying10/react"
 
 	"github.com/russross/blackfriday"
 
@@ -24,7 +24,7 @@ import (
 var htmlCache = make(map[string][]react.Element)
 
 // HTML is a runtime JSX-like parsereact. It parses the supplied HTML string into
-// myitcv.io/react element values. It exists as a stop-gap runtime solution to
+// github.com/lijianying10/react element values. It exists as a stop-gap runtime solution to
 // full JSX-like support within the GopherJS compilereact. It should only be used
 // where the argument is a compile-time constant string (TODO enforce this
 // within reactVet). HTML will panic in case s cannot be parsed as a valid HTML

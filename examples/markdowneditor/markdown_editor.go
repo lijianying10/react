@@ -1,9 +1,9 @@
-package markdowneditor // import "myitcv.io/react/examples/markdowneditor"
+package markdowneditor // import "github.com/lijianying10/react/examples/markdowneditor"
 
 import (
 	"github.com/gopherjs/gopherjs/js"
 	"honnef.co/go/js/dom"
-	"myitcv.io/react"
+	"github.com/lijianying10/react"
 	"myitcv.io/remarkable"
 )
 

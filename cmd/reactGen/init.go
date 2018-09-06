@@ -86,7 +86,7 @@ var minimal = map[string]string{
 package main
 
 import (
-	"myitcv.io/react"
+	"github.com/lijianying10/react"
 )
 
 type AppDef struct {
@@ -115,7 +115,7 @@ func (a AppDef) Render() react.Element {
 package main
 
 import (
-	"myitcv.io/react"
+	"github.com/lijianying10/react"
 
 	"honnef.co/go/js/dom"
 )

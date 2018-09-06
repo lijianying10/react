@@ -1,10 +1,10 @@
-package immtodoapp // import "myitcv.io/react/examples/immtodoapp"
+package immtodoapp // import "github.com/lijianying10/react/examples/immtodoapp"
 
 import (
 	"fmt"
 
 	"honnef.co/go/js/dom"
-	"myitcv.io/react"
+	"github.com/lijianying10/react"
 )
 
 //go:generate reactGen

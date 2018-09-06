@@ -1,5 +1,5 @@
-myitcv.io/react/cmd/coreGen
-myitcv.io/react/cmd/cssGen
-myitcv.io/react/cmd/reactGen
-myitcv.io/react/cmd/reactVet
-myitcv.io/react/cmd/stateGen
+github.com/lijianying10/react/cmd/coreGen
+github.com/lijianying10/react/cmd/cssGen
+github.com/lijianying10/react/cmd/reactGen
+github.com/lijianying10/react/cmd/reactVet
+github.com/lijianying10/react/cmd/stateGen

@@ -378,7 +378,7 @@ func ({{.Recv}} {{.Name}}Def) State() {{.Name}}State {
 }
 
 // IsState is an auto-generated definition so that {{.Name}}State implements
-// the myitcv.io/react.State interface.
+// the github.com/lijianying10/react.State interface.
 func ({{.Recv}} {{.Name}}State) IsState() {}
 
 var _ react.State = {{.Name}}State{}
@@ -404,7 +404,7 @@ func ({{.Recv}} {{.Name}}State) EqualsIntf(val react.State) bool {
 
 {{if .HasProps}}
 // IsProps is an auto-generated definition so that {{.Name}}Props implements
-// the myitcv.io/react.Props interface.
+// the github.com/lijianying10/react.Props interface.
 func ({{.Recv}} {{.Name}}Props) IsProps() {}
 
 // Props is an auto-generated proxy to the current props of {{.Name}}

@@ -1,1 +1,1 @@
-package prod // import "myitcv.io/react/internal/prod"
+package prod // import "github.com/lijianying10/react/internal/prod"

@@ -4,7 +4,7 @@ import (
 	"bytes"
 	"testing"
 
-	"myitcv.io/react/cmd/stateGen/_testFiles"
+	"github.com/lijianying10/react/cmd/stateGen/_testFiles"
 )
 
 func TestBasic(t *testing.T) {
