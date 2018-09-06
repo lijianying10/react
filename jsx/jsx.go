@@ -15,8 +15,6 @@ import (
 
 	"github.com/lijianying10/react"
 
-	"github.com/russross/blackfriday"
-
 	"golang.org/x/net/html"
 	"golang.org/x/net/html/atom"
 )
@@ -132,19 +130,4 @@ func HTMLElemReactElementTemplate(s string, comp map[string]react.Element) react
 	}
 
 	return res[0]
-}
-
-// Markdown is a runtime JSX-like parser for markdown. It parses the supplied
-// markdown string into an HTML string and then hands off to the HTML function.
-// Like the HTML function, it exists as a stop-gap runtime solution to full
-// JSX-like support within the GopherJS compilereact. It should only be used where
-// the argument is a compile-time constant string (TODO enforce this within
-// reactVet). Markdown will panic in case the markdown string s results in an
-// invalid HTML string
-//
-func Markdown(s string) []react.Element {
-
-	h := blackfriday.MarkdownCommon([]byte(s))
-
-	return HTML(string(h))
 }
