@@ -24,7 +24,7 @@ _testFiles/example.go:24:19: argument must be a constant string`
 	}
 
 	specs := gotool.ImportPaths([]string{
-		"myitcv.io/react/cmd/reactVet/_testFiles",
+		"github.com/lijianying10/react/cmd/reactVet/_testFiles",
 	})
 
 	emsgs := vet(wd, specs)

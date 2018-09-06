@@ -2,7 +2,7 @@
 
 package hellomessage
 
-import "myitcv.io/react"
+import "github.com/lijianying10/react"
 
 type HelloMessageElem struct {
 	react.Element
@@ -32,7 +32,7 @@ func (h HelloMessageDef) RendersElement() react.Element {
 }
 
 // IsProps is an auto-generated definition so that HelloMessageProps implements
-// the myitcv.io/react.Props interface.
+// the github.com/lijianying10/react.Props interface.
 func (h HelloMessageProps) IsProps() {}
 
 // Props is an auto-generated proxy to the current props of HelloMessage

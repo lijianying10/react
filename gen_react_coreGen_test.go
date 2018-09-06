@@ -9,8 +9,8 @@ import (
 
 	"honnef.co/go/js/dom"
 
-	"myitcv.io/react"
-	"myitcv.io/react/testutils"
+	"github.com/lijianying10/react"
+	"github.com/lijianying10/react/testutils"
 )
 
 func TestAElem(t *testing.T) {

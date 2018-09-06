@@ -1,8 +1,8 @@
 package main
 
 import (
-	"myitcv.io/react"
-	"myitcv.io/react/examples"
+	"github.com/lijianying10/react"
+	"github.com/lijianying10/react/examples"
 )
 
 type tab uint32

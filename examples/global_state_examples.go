@@ -2,7 +2,7 @@ package examples
 
 import (
 	"honnef.co/go/js/xhr"
-	"myitcv.io/react"
+	"github.com/lijianying10/react"
 )
 
 // GlobalStateExamplesDef is the definition of the GlobalStateExamples component

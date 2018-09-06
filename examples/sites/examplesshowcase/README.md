@@ -6,6 +6,6 @@ To run this web app locally:
 gopherjs serve
 ```
 
-Now navigate to [http://localhost:8080/myitcv.io/react/examples/sites/examplesshowcase/](http://localhost:8080/myitcv.io/react/examples/sites/examplesshowcase/).
+Now navigate to [http://localhost:8080/github.com/lijianying10/react/examples/sites/examplesshowcase/](http://localhost:8080/github.com/lijianying10/react/examples/sites/examplesshowcase/).
 
 See [the wiki](https://github.com/myitcv/react/wiki) for more details

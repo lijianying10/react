@@ -7,8 +7,8 @@ import (
 	"time"
 
 	"honnef.co/go/js/dom"
-	"myitcv.io/react"
-	"myitcv.io/react/jsx"
+	"github.com/lijianying10/react"
+	"github.com/lijianying10/react/jsx"
 )
 
 //go:generate immutableGen

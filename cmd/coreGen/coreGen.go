@@ -4,7 +4,7 @@
 /*
 
 coreGen is a go generate generator that helps to automate writing the core of
-myitcv.io/react.
+github.com/lijianying10/react.
 
 For more information see https://github.com/myitcv/react/wiki
 

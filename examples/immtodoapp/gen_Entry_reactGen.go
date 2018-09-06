@@ -2,7 +2,7 @@
 
 package immtodoapp
 
-import "myitcv.io/react"
+import "github.com/lijianying10/react"
 
 type EntryElem struct {
 	react.Element
@@ -32,7 +32,7 @@ func (e EntryDef) RendersElement() react.Element {
 }
 
 // IsProps is an auto-generated definition so that EntryProps implements
-// the myitcv.io/react.Props interface.
+// the github.com/lijianying10/react.Props interface.
 func (e EntryProps) IsProps() {}
 
 // Props is an auto-generated proxy to the current props of Entry

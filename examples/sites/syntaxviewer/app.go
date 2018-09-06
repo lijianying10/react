@@ -14,7 +14,7 @@ import (
 	"mvdan.cc/sh/syntax"
 
 	"honnef.co/go/js/dom"
-	"myitcv.io/react"
+	"github.com/lijianying10/react"
 )
 
 type AppDef struct {

@@ -18,7 +18,7 @@ import (
 )
 
 const (
-	reactPkg      = "myitcv.io/react"
+	reactPkg      = "github.com/lijianying10/react"
 	compDefName   = "ComponentDef"
 	compDefSuffix = "Def"
 

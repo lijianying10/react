@@ -1,10 +1,10 @@
 package main
 
 import (
-	"myitcv.io/react"
-	"myitcv.io/react/components/imm"
-	"myitcv.io/react/examples/sites/globalstate/model"
-	"myitcv.io/react/examples/sites/globalstate/state"
+	"github.com/lijianying10/react"
+	"github.com/lijianying10/react/components/imm"
+	"github.com/lijianying10/react/examples/sites/globalstate/model"
+	"github.com/lijianying10/react/examples/sites/globalstate/state"
 	"myitcv.io/sorter"
 )
 

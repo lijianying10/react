@@ -1,6 +1,6 @@
 package testutils
 
-import "myitcv.io/react"
+import "github.com/lijianying10/react"
 
 //go:generate reactGen
 

@@ -3,7 +3,7 @@ package main
 import "fmt"
 
 type Elem struct {
-	// The myitcv.io/react Name of the element - not set directly, taken from
+	// The github.com/lijianying10/react Name of the element - not set directly, taken from
 	// the key of the elements map.
 	Name string
 
@@ -113,7 +113,7 @@ func (e *Elem) HTMLAttributes() map[string]*Attr {
 }
 
 type Attr struct {
-	// The myitcv.io/react Name of the attribute - not set directly, taken from
+	// The github.com/lijianying10/react Name of the attribute - not set directly, taken from
 	// the key of the elements map.
 	Name string
 

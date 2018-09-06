@@ -2,7 +2,7 @@
 
 package main
 
-import "myitcv.io/react"
+import "github.com/lijianying10/react"
 
 type AppElem struct {
 	react.Element
@@ -36,7 +36,7 @@ func (a AppDef) State() AppState {
 }
 
 // IsState is an auto-generated definition so that AppState implements
-// the myitcv.io/react.State interface.
+// the github.com/lijianying10/react.State interface.
 func (a AppState) IsState() {}
 
 var _ react.State = AppState{}

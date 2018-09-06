@@ -7,7 +7,7 @@ import (
 	"path"
 	"strings"
 
-	"myitcv.io/react/examples/sites/globalstate/model"
+	"github.com/lijianying10/react/examples/sites/globalstate/model"
 )
 
 var _ Node = new(App)

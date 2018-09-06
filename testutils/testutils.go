@@ -5,12 +5,12 @@ import (
 
 	"honnef.co/go/js/dom"
 
-	"myitcv.io/react"
-	"myitcv.io/react/internal/core"
+	"github.com/lijianying10/react"
+	"github.com/lijianying10/react/internal/core"
 
 	"github.com/gopherjs/gopherjs/js"
 
-	_ "myitcv.io/react/internal/testutils"
+	_ "github.com/lijianying10/react/internal/testutils"
 )
 
 var (

@@ -6,7 +6,7 @@ import (
 	"fmt"
 	"strings"
 
-	"myitcv.io/react"
+	"github.com/lijianying10/react"
 
 	"golang.org/x/net/html"
 )

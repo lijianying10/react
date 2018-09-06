@@ -3,9 +3,9 @@ package examples
 import (
 	"honnef.co/go/js/xhr"
 	"myitcv.io/highlightjs"
-	"myitcv.io/react"
-	"myitcv.io/react/examples/immtodoapp"
-	"myitcv.io/react/jsx"
+	"github.com/lijianying10/react"
+	"github.com/lijianying10/react/examples/immtodoapp"
+	"github.com/lijianying10/react/jsx"
 )
 
 // ImmExamplesDef is the definition of the ImmExamples component

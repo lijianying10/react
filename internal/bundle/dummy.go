@@ -1,1 +1,1 @@
-package bundle // import "myitcv.io/react/internal/bundle"
+package bundle // import "github.com/lijianying10/react/internal/bundle"

@@ -1,10 +1,10 @@
-package todoapp // import "myitcv.io/react/examples/todoapp"
+package todoapp // import "github.com/lijianying10/react/examples/todoapp"
 
 import (
 	"fmt"
 
 	"honnef.co/go/js/dom"
-	"myitcv.io/react"
+	"github.com/lijianying10/react"
 )
 
 //go:generate reactGen
@@ -28,7 +28,7 @@ func TodoApp() *TodoAppElem {
 // Equals must be defined because struct val instances of TodoAppState cannot
 // be compared. It is generally bad practice to have mutable values in state in
 // this way; myitcv.io/immutable seeks to help address this problem.
-// See myitcv.io/react/examples/immtodoapp for an example
+// See github.com/lijianying10/react/examples/immtodoapp for an example
 func (c TodoAppState) Equals(v TodoAppState) bool {
 	if c.currItem != v.currItem {
 		return false

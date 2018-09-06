@@ -2,7 +2,7 @@
 
 package examples
 
-import "myitcv.io/react"
+import "github.com/lijianying10/react"
 
 type GlobalStateExamplesElem struct {
 	react.Element
@@ -36,7 +36,7 @@ func (g GlobalStateExamplesDef) State() GlobalStateExamplesState {
 }
 
 // IsState is an auto-generated definition so that GlobalStateExamplesState implements
-// the myitcv.io/react.State interface.
+// the github.com/lijianying10/react.State interface.
 func (g GlobalStateExamplesState) IsState() {}
 
 var _ react.State = GlobalStateExamplesState{}

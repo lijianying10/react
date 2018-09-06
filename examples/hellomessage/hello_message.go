@@ -1,7 +1,7 @@
-package hellomessage // import "myitcv.io/react/examples/hellomessage"
+package hellomessage // import "github.com/lijianying10/react/examples/hellomessage"
 
 import (
-	"myitcv.io/react"
+	"github.com/lijianying10/react"
 )
 
 //go:generate reactGen

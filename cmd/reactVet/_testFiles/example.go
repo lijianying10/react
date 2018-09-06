@@ -1,7 +1,7 @@
 package main
 
 import (
-	"myitcv.io/react/jsx"
+	"github.com/lijianying10/react/jsx"
 )
 
 const (

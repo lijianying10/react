@@ -4,7 +4,7 @@ import (
 	"math/rand"
 	"time"
 
-	"myitcv.io/react"
+	"github.com/lijianying10/react"
 )
 
 func init() {

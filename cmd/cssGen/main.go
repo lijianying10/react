@@ -1,4 +1,4 @@
-// cssGen is a temporary code generator for the myitcv.io/react.CSS type
+// cssGen is a temporary code generator for the github.com/lijianying10/react.CSS type
 //
 package main
 
@@ -157,7 +157,7 @@ import (
 	"fmt"
 	"strings"
 
-	"myitcv.io/react"
+	"github.com/lijianying10/react"
 )
 
 func parseCSS(s string) *react.CSS {

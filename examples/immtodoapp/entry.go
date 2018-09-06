@@ -1,6 +1,6 @@
 package immtodoapp
 
-import "myitcv.io/react"
+import "github.com/lijianying10/react"
 
 type EntryDef struct {
 	react.ComponentDef

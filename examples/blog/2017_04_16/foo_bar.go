@@ -5,13 +5,13 @@ package main
 import (
 	"fmt"
 
-	"myitcv.io/react"
+	"github.com/lijianying10/react"
 )
 
 //go:generate reactGen
 
 // FooBarDef is the definition of the FooBar component. All components are
-// declared with a *Def suffix and an embedded myitcv.io/react.ComponentDef
+// declared with a *Def suffix and an embedded github.com/lijianying10/react.ComponentDef
 // field
 //
 type FooBarDef struct {

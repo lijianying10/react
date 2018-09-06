@@ -1,4 +1,4 @@
-## `myitcv.io/react/cmd/stateGen`
+## `github.com/lijianying10/react/cmd/stateGen`
 
 `stateGen` is a `go generate` generator that helps to automate the process of
 creating state trees that are global to components.

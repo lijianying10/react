@@ -2,7 +2,7 @@
 
 package examples
 
-import "myitcv.io/react"
+import "github.com/lijianying10/react"
 
 type ImmExamplesElem struct {
 	react.Element
@@ -36,7 +36,7 @@ func (i ImmExamplesDef) State() ImmExamplesState {
 }
 
 // IsState is an auto-generated definition so that ImmExamplesState implements
-// the myitcv.io/react.State interface.
+// the github.com/lijianying10/react.State interface.
 func (i ImmExamplesState) IsState() {}
 
 var _ react.State = ImmExamplesState{}

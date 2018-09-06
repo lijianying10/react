@@ -1,17 +1,17 @@
 // Copyright (c) 2016 Paul Jolly <paul@myitcv.org.uk>, all rights reserved.
 // Use of this document is governed by a license found in the LICENSE document.
 
-package examples // import "myitcv.io/react/examples"
+package examples // import "github.com/lijianying10/react/examples"
 
 import (
 	"honnef.co/go/js/xhr"
 	"myitcv.io/highlightjs"
-	"myitcv.io/react"
-	"myitcv.io/react/examples/hellomessage"
-	"myitcv.io/react/examples/markdowneditor"
-	"myitcv.io/react/examples/timer"
-	"myitcv.io/react/examples/todoapp"
-	"myitcv.io/react/jsx"
+	"github.com/lijianying10/react"
+	"github.com/lijianying10/react/examples/hellomessage"
+	"github.com/lijianying10/react/examples/markdowneditor"
+	"github.com/lijianying10/react/examples/timer"
+	"github.com/lijianying10/react/examples/todoapp"
+	"github.com/lijianying10/react/jsx"
 )
 
 //go:generate reactGen

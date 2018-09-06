@@ -1,10 +1,10 @@
-package timer //import "myitcv.io/react/examples/timer"
+package timer //import "github.com/lijianying10/react/examples/timer"
 
 import (
 	"fmt"
 	"time"
 
-	"myitcv.io/react"
+	"github.com/lijianying10/react"
 )
 
 //go:generate reactGen

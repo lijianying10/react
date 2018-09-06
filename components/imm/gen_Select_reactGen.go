@@ -2,7 +2,7 @@
 
 package imm
 
-import "myitcv.io/react"
+import "github.com/lijianying10/react"
 
 type SelectElem struct {
 	react.Element
@@ -36,7 +36,7 @@ func (s SelectDef) State() SelectState {
 }
 
 // IsState is an auto-generated definition so that SelectState implements
-// the myitcv.io/react.State interface.
+// the github.com/lijianying10/react.State interface.
 func (s SelectState) IsState() {}
 
 var _ react.State = SelectState{}
@@ -51,7 +51,7 @@ func (s SelectState) EqualsIntf(val react.State) bool {
 }
 
 // IsProps is an auto-generated definition so that SelectProps implements
-// the myitcv.io/react.Props interface.
+// the github.com/lijianying10/react.Props interface.
 func (s SelectProps) IsProps() {}
 
 // Props is an auto-generated proxy to the current props of Select

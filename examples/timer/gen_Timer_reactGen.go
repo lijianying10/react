@@ -2,7 +2,7 @@
 
 package timer
 
-import "myitcv.io/react"
+import "github.com/lijianying10/react"
 
 type TimerElem struct {
 	react.Element
@@ -36,7 +36,7 @@ func (t TimerDef) State() TimerState {
 }
 
 // IsState is an auto-generated definition so that TimerState implements
-// the myitcv.io/react.State interface.
+// the github.com/lijianying10/react.State interface.
 func (t TimerState) IsState() {}
 
 var _ react.State = TimerState{}
