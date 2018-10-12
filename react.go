@@ -192,7 +192,6 @@ func CreateElement(buildCmp ComponentBuilder, newprops Props, children ...Elemen
 			if reflect.TypeOf(newprops).Field(i).Name == "ReactListKey" && val.Field(i).Kind() == reflect.String {
 				reactListKey := reflect.ValueOf(reflect.ValueOf(newprops).Field(i).Interface()).String()
 				if reactListKey != "" {
-					println("debug: reflect fieldname ", reflect.TypeOf(newprops).Field(i).Name, reactListKey)
 					propsWrap.Set("key", reactListKey)
 				}
 			}
@@ -246,7 +245,6 @@ func CreateElementRef(buildCmp ComponentBuilder, newprops Props, GetRef func(*js
 			if reflect.TypeOf(newprops).Field(i).Name == "ReactListKey" && val.Field(i).Kind() == reflect.String {
 				reactListKey := reflect.ValueOf(reflect.ValueOf(newprops).Field(i).Interface()).String()
 				if reactListKey != "" {
-					println("debug: reflect fieldname ", reflect.TypeOf(newprops).Field(i).Name, reactListKey)
 					propsWrap.Set("key", reactListKey)
 				}
 			}
