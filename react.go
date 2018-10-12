@@ -185,7 +185,20 @@ func CreateElement(buildCmp ComponentBuilder, newprops Props, children ...Elemen
 	if children != nil {
 		propsWrap.Set(nestedChildren, wrapValue(&children))
 	}
-
+	
+	val := reflect.Indirect(reflect.ValueOf(newprops))
+	if newprops != nil {
+		for i := 0; i < reflect.TypeOf(newprops).NumField(); i++ {
+			if reflect.TypeOf(newprops).Field(i).Name == "ReactListKey" && val.Field(i).Kind() == reflect.String {
+				reactListKey := reflect.ValueOf(reflect.ValueOf(newprops).Field(i).Interface()).String()
+				if reactListKey != "" {
+					println("debug: reflect fieldname ", reflect.TypeOf(newprops).Field(i).Name, reactListKey)
+					propsWrap.Set("key", reactListKey)
+				}
+			}
+		}
+	}
+	
 	args := []interface{}{comp, propsWrap}
 
 	for _, v := range children {
@@ -227,6 +240,19 @@ func CreateElementRef(buildCmp ComponentBuilder, newprops Props, GetRef func(*js
 		propsWrap.Set(nestedChildren, wrapValue(&children))
 	}
 
+	val := reflect.Indirect(reflect.ValueOf(newprops))
+	if newprops != nil {
+		for i := 0; i < reflect.TypeOf(newprops).NumField(); i++ {
+			if reflect.TypeOf(newprops).Field(i).Name == "ReactListKey" && val.Field(i).Kind() == reflect.String {
+				reactListKey := reflect.ValueOf(reflect.ValueOf(newprops).Field(i).Interface()).String()
+				if reactListKey != "" {
+					println("debug: reflect fieldname ", reflect.TypeOf(newprops).Field(i).Name, reactListKey)
+					propsWrap.Set("key", reactListKey)
+				}
+			}
+		}
+	}
+	
 	args := []interface{}{comp, propsWrap}
 
 	for _, v := range children {
