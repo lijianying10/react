@@ -127,7 +127,7 @@ func (g *gen) genComp(defName string) {
 				continue
 			}
 
-			if m.Type.Results != nil && len(m.Type.Results.List) != 1 {
+			if m.Type.Results == nil || (m.Type.Results != nil && len(m.Type.Results.List) != 1) {
 				continue
 			}
 
@@ -151,11 +151,11 @@ func (g *gen) genComp(defName string) {
 				continue
 			}
 
-			if m.Type.Params != nil && len(m.Type.Params.List) != 1 {
+			if m.Type.Results == nil || (m.Type.Params != nil && len(m.Type.Params.List) != 1) {
 				continue
 			}
 
-			if m.Type.Results != nil && len(m.Type.Results.List) != 1 {
+			if m.Type.Results == nil || (m.Type.Results != nil && len(m.Type.Results.List) != 1) {
 				continue
 			}
 
